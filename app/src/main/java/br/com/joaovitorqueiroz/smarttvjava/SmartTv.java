@@ -35,7 +35,7 @@ public class SmartTv extends Television{
         isConected = true;
     }
 
-    private void disconect(){
+    public void disconnect(){
         if (mode == TV && isConected) isConected = false;
     }
 

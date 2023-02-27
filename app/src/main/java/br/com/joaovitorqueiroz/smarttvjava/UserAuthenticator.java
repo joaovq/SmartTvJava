@@ -2,7 +2,7 @@ package br.com.joaovitorqueiroz.smarttvjava;
 
 import java.util.Map;
 
-public class UserAuthenticator extends Authenticator<String, User> {
+public class UserAuthenticator implements Authenticator<String, User> {
     @Override
     public boolean isAuth(User input, Map<String, User> base) {
        if (base.containsKey(input.getLogin())){
@@ -12,4 +12,5 @@ public class UserAuthenticator extends Authenticator<String, User> {
        }
        return false;
     }
+
 }
